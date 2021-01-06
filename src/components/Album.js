@@ -39,27 +39,29 @@ function Album({ showAlbum, album, albumPic }) {
   //   };
 
   const trackListVariants = {
-      enter: {
-          opacity:1,
-          transition:{delay:2.5, duration:1}
-      },
-      exit:{
-          opacity:0,
-          transition:{delay:0.5}
-      },
-      initial: {
-          opacity:0
-      }
-  }
+    enter: {
+      opacity: 1,
+      transition: { delay: 2.5, duration: 1 },
+    },
+    exit: {
+      opacity: 0,
+      transition: { delay: 0.5 },
+    },
+    initial: {
+      opacity: 0,
+    },
+  };
 
   const imgVariants = {
     enter: {
-      x: -930,
-      scale: 1.25,
+      x: -840,
+      y: -52,
+      scale: 1.35,
       transition: { delay: 0.5, duration: 2 },
     },
     exit: {
       x: 0,
+      y: 0,
       scale: 1,
       transition: { delay: 0.5, duration: 2 },
     },
@@ -98,13 +100,13 @@ function Album({ showAlbum, album, albumPic }) {
           <div className="home__left">
             <div initial="initial" animate="animate" className="home__header">
               <MenuRoundedIcon
-                style={{ fontSize: 50, color: menuColor }}
+                style={{ fontSize: 50, color: menuColor, visibility:'hidden' }}
                 onClick={() => handleMenuClick()}
               />
             </div>
 
             <div className="home__left__copyandAlbums">
-              <div className="home__left__copyright" style={{ zIndex: 1005 }}>
+              <div className="home__left__copyright" style={{ visibility:'hidden' }}>
                 <p>
                   No Copyright intended - Unofficial website - Paoleski's
                   Productions 2020
@@ -189,15 +191,15 @@ function Album({ showAlbum, album, albumPic }) {
             </div>
           </div>
           <div className="home__right">
-            <div className="album__pictureContainer">
-              <motion.img
-                variants={imgVariants}
-                initial="initial"
-                animate="enter"
-                exit="exit"
-                src={albumPic}
-              />
-            </div>
+            <motion.div
+              variants={imgVariants}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+              className="album__pictureContainer"
+            >
+              <img alt="" src={albumPic} />
+            </motion.div>
           </div>
           <motion.div
             variants={trackListVariants}
@@ -223,11 +225,12 @@ function Album({ showAlbum, album, albumPic }) {
                   {i + 1}. {track}
                 </p>
               ))}
-              {albumInfo && (
+            {albumInfo && (
               <p
                 style={{
                   color: '#FFC94C',
                   marginTop: 15,
+                  marginBottom:30
                 }}
               >
                 {albumInfo?.released}

@@ -41,8 +41,8 @@
   font-family: 'Neue Plak';
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  margin-bottom: 100px;
 }
 
 .home__container {
@@ -60,13 +60,13 @@
 .home__left__copyandAlbums {
   display:flex;
   margin-left:20px;
-  margin-top:40px;
+  margin-top:20px;
 }
 
 .home__left__copyright {
   width: fit-content;
-  margin-left:12px;
-  margin-top:10px;
+  margin-left:14px;
+  margin-top:2px;
   writing-mode: vertical-lr;
   text-orientation: mixed;
   font-size: 16px;
@@ -79,7 +79,7 @@
 }
 
 .home__left__albumsList {
-  font-size: 70px;
+  font-size: 65px;
   text-transform: uppercase;
   width: 90%;
   margin-left: 50px;
@@ -119,7 +119,7 @@
   top:22px;
   right:0;
   left:0;
-  position:fixed;
+  position: absolute;;
 }
 
 .home__header {
