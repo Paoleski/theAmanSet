@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Neue Plak';
+  src: url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.eot');
+  src: url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/51193cf9247fa2582dde85682d9b810a.svg#Neue Plak')
+      format('svg');
+}
+
+/* @font-face {
+  font-family: 'Neue Plak W01';
+  src: url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.eot');
+  src: url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/d3a85c6c38eeb78ad624d05db74526bd.svg#Neue Plak W01')
+      format('svg');
+} */
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./proxima-nova.otf') format('opentype');
+}
+
+.home {
+  width: 100vw;
+  position:absolute;
+  background-color: #12151f;
+  /* background-color:#f9faf4; */
+  font-family: 'Neue Plak';
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home__container {
+  display: flex;
+  height: 100%;
+}
+
+.home__left {
+  margin-left: 10px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.home__left__copyandAlbums {
+  display:flex;
+  margin-left:20px;
+  margin-top:40px;
+}
+
+.home__left__copyright {
+  width: fit-content;
+  margin-left:12px;
+  margin-top:10px;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Proxima Nova';
+  letter-spacing: ' 0.117647em';
+  z-index: 1007;
+  color: #4b6464;
+}
+
+.home__left__albumsList {
+  font-size: 70px;
+  text-transform: uppercase;
+  width: 90%;
+  margin-left: 50px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+.home__right {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top:70px;
+}
+
+.home__pictureContainer {
+  margin-right: 30px;
+  margin-top: 170px;
+  height: 55%;
+  width: 78%;
+  position: relative;
+}
+
+.home__pictureContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1px;
+  position: absolute;
+}
+
+.home__title {
+  text-transform: uppercase;
+  text-align: center;
+  /* color: #f37b7e; */
+  color:#FFC94C;
+  top:22px;
+  right:0;
+  left:0;
+  position:fixed;
+}
+
+.home__header {
+  height: fit-content;
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-top: 37px;
+  z-index:1006;
+}
+
+.album__arrow {
+  position:fixed;
+  top:37px;
+  right:20px;
+  width:fit-content;
+  height: fit-content;
+  align-self:flex-end;
+  z-index:1003;
+}

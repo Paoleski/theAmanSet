@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./proxima-nova.otf') format('opentype');
+  }
+
+.album {
+    height:100vh;
+    width:100vw;
+    background-color: #12151f;
+    font-family: 'Neue Plak';
+    display: flex;
+    z-index: 1003;
+    position:absolute;
+}
+
+.album__pictureContainer {
+  margin-right: 30px;
+  margin-top: 170px;
+  height: 55%;
+  width: 78%;
+}
+
+.album__pictureContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 1px;
+}
+
+.album__tracklist {
+    font-size:30px;
+    z-index: 1005;
+    position: absolute;
+    font-family: 'Neue Plak';
+    width:40%;
+    top:16%;
+    right:7%;
+}
+
+.album__tracklist > p {
+    padding:4px;
+}
+
