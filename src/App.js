@@ -1,18 +1,16 @@
 import { AnimatePresence } from 'framer-motion';
-import { Route, Switch, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import './styles/App.css';
+import { Breakpoint, BreakpointProvider } from 'react-socks';
 
 function App() {
-  const location = useLocation()
-
   return (
     <div className="App">
-      <AnimatePresence>
-      <Switch location={location} key={location.pathname}>
-        <Route exact path="/" component={Home} />
-      </Switch>
-      </AnimatePresence>
+      <BreakpointProvider>
+        <AnimatePresence>
+          <Home />
+        </AnimatePresence>
+      </BreakpointProvider>
     </div>
   );
 }

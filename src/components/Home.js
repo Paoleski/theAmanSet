@@ -33,11 +33,11 @@ function Home() {
 
   const seeAlbumVariants = {
     animate: {
-      x: 0,
-      transition: { delay: 0.3, duration: 1 },
+      opacity:1,
+      transition: { delay: 0.6, duration: 1 },
     },
     initial: {
-      x: 400,
+      opacity:0,
     },
     hover: {
       color: [null, '#4b6464', '#FFC94C', '#f37b7e'],
@@ -48,10 +48,10 @@ function Home() {
   const leftDivVariants = {
     animate: {
       x: 0,
-      transition: { delay: 1, duration: 1.7 },
+      transition: { delay: 0.1, duration: 1 },
     },
     initial: {
-      x: -800,
+      x: -100,
     },
   };
 
@@ -138,6 +138,12 @@ function Home() {
     }
   };
 
+  const handleListClick = () => {
+    setTimeout(() => {
+      handleAlbumClick()
+    },500)
+  }
+
   const handleAlbumClick = () => {
     setShowAlbum(true);
   };
@@ -163,7 +169,6 @@ function Home() {
             style={{
               fontFamily: 'Neue Plak',
               letterSpacing: ' 0.117647em',
-              fontSize: 55,
             }}
           >
             The american analog SET
@@ -173,7 +178,7 @@ function Home() {
           <CloseIcon
             style={{
               color: menuColor,
-              fontSize: 50,
+              fontSize: '3rem',
               visibility: showAlbum ? '' : 'hidden',
             }}
           />
@@ -186,7 +191,7 @@ function Home() {
             className="home__header"
           >
             <MenuRoundedIcon
-              style={{ fontSize: 50, color: menuColor }}
+              style={{ fontSize: '2.5rem', color: menuColor }}
               onClick={() => handleMenuClick()}
             />
           </motion.div>
@@ -212,6 +217,7 @@ function Home() {
                 id="fireworks"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 style={{
                   color: '#FEC056',
                   marginBottom: -5,
@@ -229,6 +235,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 style={{
                   color: '#FAAF66',
                   marginTop: -5,
@@ -247,6 +254,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 style={{
                   color: '#F9A66C',
                   marginTop: -5,
@@ -265,8 +273,9 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 style={{
-                  color: '#F79574',
+                  color: '#F89E70',
                   marginTop: -5,
                   marginBottom: -5,
                   width: 'fit-content',
@@ -278,13 +287,14 @@ function Home() {
                 id="promiseoflove"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 variants={pVariants}
                 initial={{ x: -800, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.9, duration: 2 }}
                 whileHover="hover"
                 style={{
-                  color: '#F89E70',
+                  color: '#F79574',
                   marginTop: -5,
                   marginBottom: -5,
                   width: 'fit-content',
@@ -296,6 +306,7 @@ function Home() {
                 id="setfree"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 variants={pVariants}
                 initial={{ x: -800, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -319,6 +330,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                onTouchEnd={handleListClick}
                 style={{
                   color: '#f37b7e',
                   marginTop: -5,
@@ -331,7 +343,6 @@ function Home() {
           </div>
         </motion.div>
         <div className="home__right">
-          {/* <p style={{ color: '#FEC056', fontSize: 40, textAlign: 'center' }}>RELEASED IN 2005</p> */}
           <motion.div
             variants={rightDivVariants}
             initial="initial"
@@ -357,8 +368,6 @@ function Home() {
               style={{
                 cursor: 'pointer',
                 color: '#f37b7e',
-                fontSize: 40,
-                marginLeft: '18%',
               }}
               onClick={() => handleAlbumClick()}
             >

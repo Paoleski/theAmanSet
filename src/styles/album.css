@@ -1,24 +1,24 @@
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('./proxima-nova.otf') format('opentype');
-  }
+  font-family: 'Proxima Nova';
+  src: url('./proxima-nova.otf') format('opentype');
+}
 
 .album {
-    min-height:100vh;
-    width:100vw;
-    background-color: #12151f;
-    font-family: 'Neue Plak';
-    display: flex;
-    z-index: 1003;
-    position:absolute;
-    overflow:auto;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #12151f;
+  font-family: 'Neue Plak';
+  display: flex;
+  z-index: 1003;
+  position: absolute;
+  overflow: auto;
 }
 
 .album__pictureContainer {
-  margin-right: 30px;
-  margin-top: 170px;
-  height: 55%;
-  width: 78%;
+  height: 50%;
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
 }
 
 .album__pictureContainer > img {
@@ -26,33 +26,108 @@
   height: 100%;
   object-fit: cover;
   padding: 1px;
+  position: absolute;
 }
 
 .album__tracklist {
-    font-size:30px;
-    z-index: 1005;
-    position: absolute;
-    font-family: 'Neue Plak';
-    width:40%;
-    top:16%;
-    right:7%;
+  font-size: 30px;
+  z-index: 1005;
+  position: absolute;
+  font-family: 'Neue Plak';
+  width: 40%;
+  top: 18%;
+  right: 7%;
 }
 
 .album__tracklist > p {
-    padding:4px;
+  padding: 4px;
 }
 
 .album__left__copyandAlbums {
-    display:flex;
-    margin-left:20px;
-    margin-top:20px;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 27px;
 }
 
 .album__left__albumsList {
-    font-size: 65px;
-    text-transform: uppercase;
-    width: 90%;
-    margin-left: 50px;
-    margin-top: 20px;
-    cursor: pointer;
+  font-size: 65px;
+  text-transform: uppercase;
+  width: 100%;
+  margin:auto;
+  padding-left:40px;
+  cursor: pointer;
+  margin-bottom:20px;
+}
+
+.album__right {
+  display: flex;
+  flex-direction: column;
+  flex:0.3;
+  align-items: center;
+  justify-content: center;
+  font-size:2.5rem;
+}
+
+.album__left {
+  display: flex;
+  flex-direction: column;
+  flex:0.7;
+  flex-grow:1;
+}
+
+.album__pictureContainer__mobile {
+  display: none;
+}
+
+
+@media screen and (max-width:800px) {
+  .album__right {
+    display:flex;
+    flex:1;
+    flex-grow:1;
+  }
+
+  .album__left__albumsList {
+    font-size:33px;
+    padding-left:20px;
+  }
+
+  .album__left {
+    display:none;
+  }
+
+  .album__tracklist {
+    font-size:15px;
+    right:0;
+    position:inherit;
+    margin:10px auto;
+    width:90%;
+    text-align: center;
+  }
+
+  .album__pictureContainer {
+    display:none;
+  }
+
+  .album__pictureContainer__mobile {
+    display:flex;
+    width:90%;
+    margin-top:130px;
+  }
+
+  .album__pictureContainer__mobile > img {
+    object-fit: contain;
+    width:100%;
+    height:100%;
+  }
+
+  .home__left__copyright {
+    display:none;
+  }
+
+  .album__seeAlbum {
+    display: none;
+  }
+
+
 }

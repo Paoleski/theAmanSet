@@ -42,30 +42,30 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin-bottom: 100px;
 }
 
 .home__container {
   display: flex;
-  height: 100%;
+  min-height:100vh;
 }
 
 .home__left {
-  margin-left: 10px;
-  width: 70%;
   display: flex;
   flex-direction: column;
+  flex:0.7;
+  flex-grow:1;
 }
 
 .home__left__copyandAlbums {
   display:flex;
   margin-left:20px;
-  margin-top:20px;
+  margin-top:40px;
+  
 }
 
 .home__left__copyright {
   width: fit-content;
-  margin-left:14px;
+  margin-left:10px;
   margin-top:2px;
   writing-mode: vertical-lr;
   text-orientation: mixed;
@@ -81,27 +81,31 @@
 .home__left__albumsList {
   font-size: 65px;
   text-transform: uppercase;
-  width: 90%;
-  margin-left: 50px;
-  margin-top: 20px;
+  width: 100%;
+  margin:auto;
+  padding-left:40px;
   cursor: pointer;
+  margin-bottom:20px;
 }
 
 
 .home__right {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-top:70px;
+  flex:0.3;
+  align-items: center;
+  justify-content: center;
+  font-size:2.5rem;
 }
 
 .home__pictureContainer {
-  margin-right: 30px;
-  margin-top: 170px;
-  height: 55%;
-  width: 78%;
+  height: 50%;
+  width: 100%;
   position: relative;
+  margin-top:100px;
+ 
 }
+
 
 .home__pictureContainer > img {
   width: 100%;
@@ -119,14 +123,15 @@
   top:22px;
   right:0;
   left:0;
-  position: absolute;;
+  position: absolute;
+  font-size: 1.4rem;
 }
 
 .home__header {
   height: fit-content;
   align-self: flex-start;
   margin-left: 20px;
-  margin-top: 37px;
+  margin-top: 27px;
   z-index:1006;
 }
 
@@ -138,4 +143,40 @@
   height: fit-content;
   align-self:flex-end;
   z-index:1003;
+}
+
+@media screen and (max-width:800px) {
+  .home__right {
+    display:none;
+  }
+
+  .home__left__albumsList {
+    font-size:33px;
+    padding-left:20px;
+  }
+
+  .home__title {
+    font-size:14px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .home__left__copyright {
+    font-size:12px;
+  }
+
+  .home__left__copyandAlbums {
+    margin-left:10px;
+  }
+
+  .home__header {
+    margin-left:10px;
+    margin-top:44px;
+  }
+
+  .album__arrow {
+    right:10px;
+    top:44px;
+  }
 }
