@@ -217,7 +217,7 @@ function Home() {
                 id="fireworks"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 style={{
                   color: '#FEC056',
                   marginBottom: -5,
@@ -235,7 +235,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 style={{
                   color: '#FAAF66',
                   marginTop: -5,
@@ -254,7 +254,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 style={{
                   color: '#F9A66C',
                   marginTop: -5,
@@ -273,7 +273,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 style={{
                   color: '#F89E70',
                   marginTop: -5,
@@ -287,7 +287,7 @@ function Home() {
                 id="promiseoflove"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 variants={pVariants}
                 initial={{ x: -800, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -306,7 +306,7 @@ function Home() {
                 id="setfree"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 variants={pVariants}
                 initial={{ x: -800, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -330,7 +330,7 @@ function Home() {
                 whileHover="hover"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onTouchEnd={handleListClick}
+                onTouchStart={handleListClick}
                 style={{
                   color: '#f37b7e',
                   marginTop: -5,
